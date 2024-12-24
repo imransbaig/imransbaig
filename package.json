@@ -1,0 +1,17 @@
+{
+  "name": "fastclose-backend",
+  "version": "1.0.0",
+  "description": "Backend for FastClose AI accounting solution",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "author": "Imran Baig",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  }
+}

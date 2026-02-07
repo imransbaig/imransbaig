@@ -13,8 +13,6 @@ from fastapi.staticfiles import StaticFiles
 from app.database import Base, engine
 from app.routers import action, coach, cue, feedback, state, sync
 from app.schemas import HealthResponse
-from app.sms_gatekeeper.router import router as sms_router
-import app.sms_gatekeeper.models  # noqa: F401  -- register model with Base
 
 # ---------------------------------------------------------------------------
 # Logging
@@ -82,7 +80,6 @@ app.include_router(action.router)
 app.include_router(cue.router)
 app.include_router(feedback.router)
 app.include_router(coach.router)
-app.include_router(sms_router)
 
 # ---------------------------------------------------------------------------
 # Static Files & PWA

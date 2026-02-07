@@ -6,32 +6,224 @@
 	objectVersion = 56;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		A1B2C3D400000001 /* HealthCoachApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E2D3C400000001 /* HealthCoachApp.swift */; };
+		A1B2C3D400000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E2D3C400000002 /* ContentView.swift */; };
+		A1B2C3D400000003 /* HealthModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E2D3C400000003 /* HealthModels.swift */; };
+		A1B2C3D400000004 /* HealthCoachViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E2D3C400000004 /* HealthCoachViewModel.swift */; };
+		A1B2C3D400000005 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E2D3C400000005 /* TodayView.swift */; };
+		A1B2C3D400000006 /* NextBestActionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E2D3C400000006 /* NextBestActionCard.swift */; };
+		A1B2C3D400000007 /* TrustPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E2D3C400000007 /* TrustPanelView.swift */; };
+		A1B2C3D400000008 /* LiveModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E2D3C400000008 /* LiveModeView.swift */; };
+		A1B2C3D400000009 /* CueLoggerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E2D3C400000009 /* CueLoggerView.swift */; };
+		A1B2C3D40000000A /* InsightsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E2D3C40000000A /* InsightsView.swift */; };
+		A1B2C3D40000000B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E2D3C40000000B /* SettingsView.swift */; };
+		A1B2C3D40000000C /* BreathingExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E2D3C40000000C /* BreathingExerciseView.swift */; };
+		A1B2C3D40000000D /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E2D3C40000000D /* APIClient.swift */; };
+		A1B2C3D40000000E /* FitbitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E2D3C40000000E /* FitbitService.swift */; };
+		A1B2C3D40000000F /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E2D3C40000000F /* AppTheme.swift */; };
+		A1B2C3D400000010 /* CardModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E2D3C400000010 /* CardModifier.swift */; };
+		A1B2C3D400000020 /* HealthCoachTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E2D3C400000020 /* HealthCoachTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B2C3D4E500000001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4E5F6A700000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3D4E5F600000001;
+			remoteInfo = HealthCoach;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F1E2D3C400000001 /* HealthCoachApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthCoachApp.swift; sourceTree = "<group>"; };
+		F1E2D3C400000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F1E2D3C400000003 /* HealthModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthModels.swift; sourceTree = "<group>"; };
+		F1E2D3C400000004 /* HealthCoachViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthCoachViewModel.swift; sourceTree = "<group>"; };
+		F1E2D3C400000005 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		F1E2D3C400000006 /* NextBestActionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextBestActionCard.swift; sourceTree = "<group>"; };
+		F1E2D3C400000007 /* TrustPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrustPanelView.swift; sourceTree = "<group>"; };
+		F1E2D3C400000008 /* LiveModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveModeView.swift; sourceTree = "<group>"; };
+		F1E2D3C400000009 /* CueLoggerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueLoggerView.swift; sourceTree = "<group>"; };
+		F1E2D3C40000000A /* InsightsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightsView.swift; sourceTree = "<group>"; };
+		F1E2D3C40000000B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		F1E2D3C40000000C /* BreathingExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingExerciseView.swift; sourceTree = "<group>"; };
+		F1E2D3C40000000D /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		F1E2D3C40000000E /* FitbitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitbitService.swift; sourceTree = "<group>"; };
+		F1E2D3C40000000F /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		F1E2D3C400000010 /* CardModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModifier.swift; sourceTree = "<group>"; };
+		F1E2D3C400000011 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1E2D3C400000020 /* HealthCoachTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthCoachTests.swift; sourceTree = "<group>"; };
+		E2F3A4B500000001 /* HealthCoach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthCoach.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2F3A4B500000002 /* HealthCoachTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthCoachTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C3D4E5F600000010 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3D4E5F600000020 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
 /* Begin PBXGroup section */
-		00000000000000000000001 /* HealthCoach */ = {
+		D4E5F6A700000002 /* Root */ = {
 			isa = PBXGroup;
 			children = (
+				D4E5F6A700000003 /* HealthCoach */,
+				D4E5F6A700000009 /* HealthCoachTests */,
+				D4E5F6A70000000A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D4E5F6A700000003 /* HealthCoach */ = {
+			isa = PBXGroup;
+			children = (
+				F1E2D3C400000001 /* HealthCoachApp.swift */,
+				F1E2D3C400000002 /* ContentView.swift */,
+				F1E2D3C400000011 /* Info.plist */,
+				D4E5F6A700000004 /* Models */,
+				D4E5F6A700000005 /* ViewModels */,
+				D4E5F6A700000006 /* Views */,
+				D4E5F6A700000007 /* Services */,
+				D4E5F6A700000008 /* Theme */,
 			);
 			path = HealthCoach;
 			sourceTree = "<group>";
 		};
-		00000000000000000000002 /* Root */ = {
+		D4E5F6A700000004 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				00000000000000000000001 /* HealthCoach */,
+				F1E2D3C400000003 /* HealthModels.swift */,
 			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D4E5F6A700000005 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F1E2D3C400000004 /* HealthCoachViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D4E5F6A700000006 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F1E2D3C400000005 /* TodayView.swift */,
+				F1E2D3C400000006 /* NextBestActionCard.swift */,
+				F1E2D3C400000007 /* TrustPanelView.swift */,
+				F1E2D3C400000008 /* LiveModeView.swift */,
+				F1E2D3C400000009 /* CueLoggerView.swift */,
+				F1E2D3C40000000A /* InsightsView.swift */,
+				F1E2D3C40000000B /* SettingsView.swift */,
+				F1E2D3C40000000C /* BreathingExerciseView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D4E5F6A700000007 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F1E2D3C40000000D /* APIClient.swift */,
+				F1E2D3C40000000E /* FitbitService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D4E5F6A700000008 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				F1E2D3C40000000F /* AppTheme.swift */,
+				F1E2D3C400000010 /* CardModifier.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		D4E5F6A700000009 /* HealthCoachTests */ = {
+			isa = PBXGroup;
+			children = (
+				F1E2D3C400000020 /* HealthCoachTests.swift */,
+			);
+			path = HealthCoachTests;
+			sourceTree = "<group>";
+		};
+		D4E5F6A70000000A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E2F3A4B500000001 /* HealthCoach.app */,
+				E2F3A4B500000002 /* HealthCoachTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXNativeTarget section */
+		C3D4E5F600000001 /* HealthCoach */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3D4E5F600000030 /* Build configuration list for PBXNativeTarget "HealthCoach" */;
+			buildPhases = (
+				C3D4E5F600000011 /* Sources */,
+				C3D4E5F600000010 /* Frameworks */,
+				C3D4E5F600000012 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HealthCoach;
+			productName = HealthCoach;
+			productReference = E2F3A4B500000001 /* HealthCoach.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C3D4E5F600000002 /* HealthCoachTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3D4E5F600000040 /* Build configuration list for PBXNativeTarget "HealthCoachTests" */;
+			buildPhases = (
+				C3D4E5F600000021 /* Sources */,
+				C3D4E5F600000020 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B2C3D4E500000002 /* PBXTargetDependency */,
+			);
+			name = HealthCoachTests;
+			productName = HealthCoachTests;
+			productReference = E2F3A4B500000002 /* HealthCoachTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
 /* Begin PBXProject section */
-		00000000000000000000003 /* Project object */ = {
+		D4E5F6A700000001 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					C3D4E5F600000001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					C3D4E5F600000002 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = C3D4E5F600000001;
+					};
+				};
 			};
-			buildConfigurationList = 00000000000000000000010 /* Build configuration list for PBXProject "HealthCoach" */;
+			buildConfigurationList = D4E5F6A700000010 /* Build configuration list for PBXProject "HealthCoach" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -39,42 +231,299 @@
 				en,
 				Base,
 			);
-			mainGroup = 00000000000000000000002 /* Root */;
-			productRefGroup = 00000000000000000000002 /* Root */;
+			mainGroup = D4E5F6A700000002 /* Root */;
+			productRefGroup = D4E5F6A70000000A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				C3D4E5F600000001 /* HealthCoach */,
+				C3D4E5F600000002 /* HealthCoachTests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		C3D4E5F600000012 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C3D4E5F600000011 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1B2C3D400000001 /* HealthCoachApp.swift in Sources */,
+				A1B2C3D400000002 /* ContentView.swift in Sources */,
+				A1B2C3D400000003 /* HealthModels.swift in Sources */,
+				A1B2C3D400000004 /* HealthCoachViewModel.swift in Sources */,
+				A1B2C3D400000005 /* TodayView.swift in Sources */,
+				A1B2C3D400000006 /* NextBestActionCard.swift in Sources */,
+				A1B2C3D400000007 /* TrustPanelView.swift in Sources */,
+				A1B2C3D400000008 /* LiveModeView.swift in Sources */,
+				A1B2C3D400000009 /* CueLoggerView.swift in Sources */,
+				A1B2C3D40000000A /* InsightsView.swift in Sources */,
+				A1B2C3D40000000B /* SettingsView.swift in Sources */,
+				A1B2C3D40000000C /* BreathingExerciseView.swift in Sources */,
+				A1B2C3D40000000D /* APIClient.swift in Sources */,
+				A1B2C3D40000000E /* FitbitService.swift in Sources */,
+				A1B2C3D40000000F /* AppTheme.swift in Sources */,
+				A1B2C3D400000010 /* CardModifier.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3D4E5F600000021 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1B2C3D400000020 /* HealthCoachTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B2C3D4E500000002 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C3D4E5F600000001 /* HealthCoach */;
+			targetProxy = B2C3D4E500000001 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		00000000000000000000011 /* Debug */ = {
+		D4E5F6A700000011 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				SWIFT_VERSION = 5.0;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		00000000000000000000012 /* Release */ = {
+		D4E5F6A700000012 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				SWIFT_VERSION = 5.0;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C3D4E5F600000031 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = HealthCoach/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Health Coach";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.healthcoach.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C3D4E5F600000032 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = HealthCoach/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Health Coach";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.healthcoach.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C3D4E5F600000041 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.healthcoach.app.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HealthCoach.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HealthCoach";
+			};
+			name = Debug;
+		};
+		C3D4E5F600000042 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.healthcoach.app.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HealthCoach.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HealthCoach";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00000000000000000000010 /* Build configuration list for PBXProject "HealthCoach" */ = {
+		D4E5F6A700000010 /* Build configuration list for PBXProject "HealthCoach" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				00000000000000000000011 /* Debug */,
-				00000000000000000000012 /* Release */,
+				D4E5F6A700000011 /* Debug */,
+				D4E5F6A700000012 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3D4E5F600000030 /* Build configuration list for PBXNativeTarget "HealthCoach" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3D4E5F600000031 /* Debug */,
+				C3D4E5F600000032 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3D4E5F600000040 /* Build configuration list for PBXNativeTarget "HealthCoachTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3D4E5F600000041 /* Debug */,
+				C3D4E5F600000042 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -82,5 +531,5 @@
 /* End XCConfigurationList section */
 
 	};
-	rootObject = 00000000000000000000003 /* Project object */;
+	rootObject = D4E5F6A700000001 /* Project object */;
 }

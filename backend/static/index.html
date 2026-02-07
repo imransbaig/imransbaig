@@ -397,6 +397,26 @@ input,textarea{font-family:inherit;border:none;outline:none;background:none;colo
       <div class="toggle" id="toggle-motion" onclick="toggleSetting(this)"></div>
     </div>
 
+    <!-- Fitbit Connection -->
+    <div class="flex-col gap-sm mt-lg">
+      <span class="t-caption color3">Fitbit</span>
+      <div class="setting-row flex-col gap-md" id="fitbit-section">
+        <div class="flex items-center justify-between w-full">
+          <div class="flex-col gap-xs">
+            <span class="t-callout color1" id="fitbit-label">Not Connected</span>
+            <span class="t-footnote color3" id="fitbit-detail">Connect your Fitbit for real data</span>
+          </div>
+          <div id="fitbit-status-dot" style="width:10px;height:10px;border-radius:50%;background:var(--text3)"></div>
+        </div>
+        <button class="btn-primary" id="btn-fitbit-connect" onclick="connectFitbit()" style="font-size:14px;padding:10px 16px">
+          Connect Fitbit
+        </button>
+        <button class="btn-outline" id="btn-fitbit-pull" onclick="pullFitbitData()" style="display:none;font-size:14px;padding:10px 16px;color:var(--primary);border-color:rgba(45,212,191,0.3)">
+          Pull Latest Data
+        </button>
+      </div>
+    </div>
+
     <div class="flex-col gap-sm mt-lg">
       <span class="t-caption color3">Server</span>
       <div class="setting-row">
@@ -999,6 +1019,67 @@ async function resetDemo() {
   runCoachCycle();
 }
 
+/* ===== FITBIT ===== */
+async function checkFitbitStatus() {
+  try {
+    const data = await apiGet('/api/sync/fitbit/status');
+    const label = document.getElementById('fitbit-label');
+    const detail = document.getElementById('fitbit-detail');
+    const dot = document.getElementById('fitbit-status-dot');
+    const btnConnect = document.getElementById('btn-fitbit-connect');
+    const btnPull = document.getElementById('btn-fitbit-pull');
+    if (data.connected) {
+      label.textContent = 'Connected';
+      detail.textContent = 'Fitbit user: ' + data.connected_users.join(', ');
+      dot.style.background = 'var(--green)';
+      btnConnect.textContent = 'Reconnect';
+      btnPull.style.display = 'flex';
+    } else if (data.configured) {
+      label.textContent = 'Not Connected';
+      detail.textContent = 'Fitbit OAuth configured — tap Connect';
+      dot.style.background = 'var(--amber)';
+    } else {
+      label.textContent = 'Not Configured';
+      detail.textContent = 'Set FITBIT_CLIENT_ID in .env to enable';
+      dot.style.background = 'var(--text3)';
+      btnConnect.style.display = 'none';
+    }
+  } catch(e) { /* silently fail */ }
+}
+
+async function connectFitbit() {
+  try {
+    const data = await apiGet('/api/sync/fitbit/authorize');
+    if (data.authorize_url) {
+      window.location.href = data.authorize_url;
+    } else {
+      showToast('Fitbit not configured on server', true);
+    }
+  } catch(e) {
+    showToast('Could not start Fitbit OAuth', true);
+  }
+}
+
+async function pullFitbitData() {
+  showToast('Pulling data from Fitbit...');
+  try {
+    const data = await apiPost('/api/sync/fitbit/pull?date=today', {});
+    if (data.readings) {
+      showToast('Synced ' + data.readings.total + ' readings from Fitbit');
+      if (data.coach_result) {
+        state.inferredState = data.coach_result.inferred_state;
+        state.nextAction = data.coach_result.next_action;
+        state.reasonTrace = data.coach_result.reason_trace;
+        state.actionId = data.coach_result.action_id;
+        state.confidence = data.coach_result.inferred_state?.confidence || 0;
+        updateUI();
+      }
+    }
+  } catch(e) {
+    showToast('Failed to pull Fitbit data: ' + e.message, true);
+  }
+}
+
 /* ===== HELPERS ===== */
 function capitalize(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
 function escapeHtml(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
@@ -1019,6 +1100,9 @@ window.addEventListener('load', () => {
 
   // Run first coach cycle
   runCoachCycle();
+
+  // Check Fitbit status
+  checkFitbitStatus();
 
   // Update insights
   updateInsights();

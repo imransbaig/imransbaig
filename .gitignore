@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+.eggs/
+venv/
+.venv/
+env/
+
+# iOS
+ios/HealthCoach.xcodeproj/xcuserdata/
+ios/HealthCoach.xcworkspace/xcuserdata/
+ios/*.xcuserstate
+ios/DerivedData/
+ios/build/
+
+# Node
+node_modules/
+
+# Environment
+.env
+*.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+desktop.ini
+Thumbs.db
+
+# Docker
+backend/postgres_data/
+
+# Test / Coverage
+.coverage
+htmlcov/
+.pytest_cache/

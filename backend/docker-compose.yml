@@ -1,0 +1,40 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:15-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: healthcoach
+      POSTGRES_PASSWORD: healthcoach_secret
+      POSTGRES_DB: healthcoach
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U healthcoach -d healthcoach"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+  api:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgresql://healthcoach:healthcoach_secret@db:5432/healthcoach
+      FITBIT_CLIENT_ID: ${FITBIT_CLIENT_ID:-}
+      FITBIT_CLIENT_SECRET: ${FITBIT_CLIENT_SECRET:-}
+      FITBIT_REDIRECT_URI: ${FITBIT_REDIRECT_URI:-http://localhost:8000/api/sync/fitbit/callback}
+      SECRET_KEY: ${SECRET_KEY:-change-me-in-production}
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - .:/app
+
+volumes:
+  pgdata:

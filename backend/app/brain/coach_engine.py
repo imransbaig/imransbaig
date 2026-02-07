@@ -135,7 +135,7 @@ class CoachEngine:
         CoachResult
         """
 
-        now = datetime.now(timezone.utc)
+        now = datetime.utcnow()
         cues = cues or []
 
         # ---- SENSE --------------------------------------------------------

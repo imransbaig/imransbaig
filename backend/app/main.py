@@ -2,13 +2,16 @@
 
 import logging
 from contextlib import asynccontextmanager
+from pathlib import Path
 from typing import AsyncGenerator
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 
 from app.database import Base, engine
-from app.routers import action, cue, feedback, state, sync
+from app.routers import action, coach, cue, feedback, state, sync
 from app.schemas import HealthResponse
 
 # ---------------------------------------------------------------------------
@@ -76,6 +79,16 @@ app.include_router(state.router)
 app.include_router(action.router)
 app.include_router(cue.router)
 app.include_router(feedback.router)
+app.include_router(coach.router)
+
+# ---------------------------------------------------------------------------
+# Static Files & PWA
+# ---------------------------------------------------------------------------
+
+_STATIC_DIR = Path(__file__).resolve().parent.parent / "static"
+
+if _STATIC_DIR.is_dir():
+    app.mount("/static", StaticFiles(directory=str(_STATIC_DIR)), name="static")
 
 
 # ---------------------------------------------------------------------------
@@ -92,3 +105,9 @@ app.include_router(feedback.router)
 def health_check() -> HealthResponse:
     """Return a simple health-check response."""
     return HealthResponse()
+
+
+@app.get("/", include_in_schema=False)
+def serve_pwa() -> FileResponse:
+    """Serve the PWA index.html at the root URL."""
+    return FileResponse(str(_STATIC_DIR / "index.html"), media_type="text/html")

@@ -1,0 +1,11 @@
+<svg viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg">
+  <!-- Deep navy background with rounded corners -->
+  <rect width="192" height="192" rx="45" fill="#1A1B2E"/>
+
+  <!-- Heart shape in teal -->
+  <path d="M96 156 C96 156, 60 130, 60 105 C60 90, 70 78, 82 78 C89 78, 96 84, 96 84 C96 84, 103 78, 110 78 C122 78, 132 90, 132 105 C132 130, 96 156, 96 156 Z" fill="#2DD4BF"/>
+
+  <!-- Pulse/ECG line -->
+  <polyline points="36,85 48,85 54,75 60,95 66,80 72,85 96,85 114,85 120,70 128,105 136,75 144,85 158,85"
+            stroke="#2DD4BF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

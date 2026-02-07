@@ -57,10 +57,14 @@ class CoachResult:
             "action_id": self.action_id,
         }
         if self.next_action is not None:
+            explanation = ""
+            if self.reason_trace and "explanation" in self.reason_trace:
+                explanation = self.reason_trace["explanation"]
             result["next_action"] = {
                 "action_type": self.next_action.action_type,
                 "priority": self.next_action.priority,
                 "trigger_name": self.next_action.trigger_name,
+                "explanation": explanation,
             }
         if self.trend_summary is not None:
             result["trend_summary"] = self.trend_summary.to_dict()
